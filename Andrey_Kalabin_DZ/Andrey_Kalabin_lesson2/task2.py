@@ -22,6 +22,7 @@ def convert_list_in_str(list_in: list) -> str:
     return str_out
 
 
-my_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
-result = convert_list_in_str(my_list)
-print(result)
+if __name__ == '__main__':
+    my_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
+    result = convert_list_in_str(my_list)
+    print(result)
