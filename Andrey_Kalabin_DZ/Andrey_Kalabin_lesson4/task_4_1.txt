@@ -1,0 +1,62 @@
+# 1
+
+andrejkalabin@MacBook-Air-Andrej 11 % pip show pillow
+WARNING: Package(s) not found: pillow
+
+#2
+
+andrejkalabin@MacBook-Air-Andrej 11 % pip install pillow
+Collecting pillow
+  Downloading Pillow-9.0.0-cp39-cp39-macosx_10_10_x86_64.whl (3.0 MB)
+     |████████████████████████████████| 3.0 MB 3.2 MB/s
+Installing collected packages: pillow
+Successfully installed pillow-9.0.0
+andrejkalabin@MacBook-Air-Andrej 11 % pip show pillow
+Name: Pillow
+Version: 9.0.0
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages
+Requires:
+Required-by:
+
+
+#3
+
+andrejkalabin@MacBook-Air-Andrej 11 % python3 -m venv my_venv
+andrejkalabin@MacBook-Air-Andrej 11 % ls -lah | grep my_venv
+drwxr-xr-x   6 andrejkalabin  staff   192B Jan 13 20:21 my_venv
+andrejkalabin@MacBook-Air-Andrej 11 % source my_venv/bin/activate
+(my_venv) andrejkalabin@MacBook-Air-Andrej 11 %
+(my_venv) andrejkalabin@MacBook-Air-Andrej 11 % pip show pillow
+WARNING: Package(s) not found: pillow
+
+#4
+
+(my_venv) andrejkalabin@MacBook-Air-Andrej 11 % pip install pillow==8
+Collecting pillow==8
+  Downloading Pillow-8.0.0-cp39-cp39-macosx_10_10_x86_64.whl (2.2 MB)
+     |████████████████████████████████| 2.2 MB 1.1 MB/s
+Installing collected packages: pillow
+Successfully installed pillow-8.0.0
+(my_venv) andrejkalabin@MacBook-Air-Andrej 11 % pip show pillow
+Name: Pillow
+Version: 8.0.0
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: /Users/andrejkalabin/python/11/my_venv/lib/python3.9/site-packages
+Requires:
+Required-by:
+
+#5
+
+(my_venv) andrejkalabin@MacBook-Air-Andrej 11 % deactivate
+andrejkalabin@MacBook-Air-Andrej 11 %
+
+
