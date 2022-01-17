@@ -3,9 +3,9 @@ import time
 
 def get_numbers(src: list):
     """
-    на мой взгляд самое оптимальное решение если применять списки
+    на мой взгляд самое оптимальное решение
     """
-    return [src[i] for i in range(len(src)) if src[i] > src[i - 1] and i != 0]
+    return (src[i] for i in range(len(src)) if src[i] > src[i - 1] and i != 0)
 
 start = time.time()
 src = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
