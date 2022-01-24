@@ -12,7 +12,6 @@ def conf(file_x):
         for i in list_x:
             x = len(i) - len(i.strip())
             base_dir = os.path.dirname(__file__)
-            # folder_1 = ''
             if x == 1:
                 dir_name = i.strip()
                 if not os.path.exists(dir_name):
