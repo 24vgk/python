@@ -15,5 +15,4 @@ with open('nginx_logs.txt', 'r', encoding='utf-8') as fr:
         if not row:
             break
         list_out.append(get_parse_attrs(row))
-
 pprint(list_out)
