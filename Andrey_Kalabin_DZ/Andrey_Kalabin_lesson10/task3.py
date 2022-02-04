@@ -10,13 +10,13 @@ class Cell:
             result = result[:-1]
         return result
 
-    def __add__(self, other):
+    def __add__(self, other: int):
         if isinstance(other, Cell):
             return Cell(self.cells + other.cells)
         else:
             raise TypeError('действие допустимо только для экземпляров того же класса')
 
-    def __sub__(self, other):
+    def __sub__(self, other: int):
         if isinstance(other, Cell):
             if self.cells - other.cells > 0:
                 return Cell(self.cells - other.cells)
@@ -25,19 +25,19 @@ class Cell:
         else:
             raise TypeError('действие допустимо только для экземпляров того же класса')
 
-    def __mul__(self, other):
+    def __mul__(self, other: int):
         if isinstance(other, Cell):
             return Cell(self.cells * other.cells)
         else:
             raise TypeError('действие допустимо только для экземпляров того же класса')
 
-    def __truediv__(self, other):
+    def __truediv__(self, other: int):
         if isinstance(other, Cell):
             return Cell(self.cells // other.cells)
         else:
             raise TypeError('действие допустимо только для экземпляров того же класса')
 
-    def __floordiv__(self, other):
+    def __floordiv__(self, other: int):
         return self.__truediv__(other)
 
 
